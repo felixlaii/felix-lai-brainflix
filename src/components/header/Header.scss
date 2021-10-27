@@ -1,0 +1,76 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/colors" as *;
+@use '../../styles/partials/global' as *;
+
+.primary-nav {
+    @include flexcentercolumn;
+    padding: 1rem;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        background-color: $primarylight;
+        padding-bottom: 1rem;
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+
+    &__search {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 4px;
+        margin-right: 5rem;
+        border-color: $secondarydark;
+        background-color: $secondarylight;
+    }
+
+    &__upload {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        border-radius: 4px;
+        background-color: $primarybrainlight;
+        color: $primarylight;
+        font-size: 0.75rem;
+        font-weight: 700;
+        border: none;
+
+        &--icon {
+            @include iconpositions;
+            top: 9.7rem;
+            height: 1.5rem;
+            margin-left: 1rem;
+        }
+    }
+
+    &__searchbar {
+        @include flexcentercolumn;
+        border: none;
+
+        &--avatar {
+            @include iconpositions;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            left: 20rem;
+            top: 5rem;
+            width: 2.5rem;
+        }
+        
+        &--icon {
+            @include iconpositions;
+            top: 5.5rem;
+            height: 1.7rem;
+            left: 1.8rem;    
+        }
+
+    }
+
+}
+
+input::placeholder {
+    padding-left: 3rem;
+}

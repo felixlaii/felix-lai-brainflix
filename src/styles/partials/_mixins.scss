@@ -1,0 +1,19 @@
+// @mixin tablet {
+//     @media screen {
+        
+//     }
+    
+// }
+
+@mixin flexcentercolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+@mixin iconpositions {
+    position: absolute;
+    z-index: 1;
+    height: 5vh;
+}
