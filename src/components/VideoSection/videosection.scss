@@ -1,0 +1,75 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/colors" as *;
+@use '../../styles/partials/global' as *;
+
+
+.primary-video {
+  
+
+    &__video {
+        object-fit: scale-down;
+        width: 100vw;
+    }
+
+    &__title {
+        padding-left: 1rem;
+    }
+
+    &__description {
+        @include brainflixpadding;
+    }
+
+    &__metrics {
+        display: flex;
+        flex-direction: column;
+
+        &-channel,
+        &-views {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__icons {
+        
+
+    &--playicon {
+        position: absolute;
+        right: 22rem;
+        top: 25rem;
+        background-color: $secondarybraindark;
+        opacity: 0.5;
+        z-index: 3;
+        padding: 4px 1rem 4px 1rem;
+        border-radius: 4px;
+        height: 1rem;
+    }
+
+    &--scrubicon {
+        position: absolute;
+        right: 5rem;
+        top: 25rem;
+        background-color: $secondarybraindark;
+        opacity: 0.5;
+        z-index: 3;
+        width: 0.5rem;
+        padding: 0.5rem 8rem 0.5rem 8rem;
+        border-radius: 4px;
+    }
+
+    &--videoadjustments {
+        position: absolute;
+        right: 0.5px;
+        top: 24.9rem;
+        background-color: $secondarybraindark;
+        opacity: 0.5;
+        z-index: 3;
+        padding: 2px 0.5rem 0.5rem 0.5rem;
+        border-radius: 4px;
+        height: 1rem;
+    }
+
+}
+}

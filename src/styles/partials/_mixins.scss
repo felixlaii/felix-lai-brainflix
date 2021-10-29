@@ -17,3 +17,8 @@
     z-index: 1;
     height: 5vh;
 }
+
+@mixin brainflixpadding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
