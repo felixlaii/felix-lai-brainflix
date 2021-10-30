@@ -5,6 +5,7 @@ import FullScreenIcon from '../../assets/icons/fullscren.svg';
 import VolumeUp from '../../assets/icons/volume_up.svg';
 
 function VideoSection(props) {
+    const { title, channel, image, description, views, likes, duration, video, timestamp, comments} = props.selectedVideo;
 
     return (
         <div className="primary-video">
@@ -20,19 +21,19 @@ function VideoSection(props) {
                     <img className="primary-video__icons--volumeupicon" src={VolumeUp} alt="Volume Up" />
                 </div>
                 </div>
-                    <img className="primary-video__video" src={props.image} alt="BMX Rampage" />
-            <h2 className="primary-video__title">{props.title}</h2>
+                    <img className="primary-video__video" src={image} alt="BMX Rampage" />
+            <h2 className="primary-video__title">{title}</h2>
 
             <div className="primary-video__metrics">
-                <p className="primary-video__metrics-channel">{props.channel}</p>
-                <p className="primary-video__metrics-views">{props.views}</p>
+                <p className="primary-video__metrics-channel">{channel}</p>
+                <p className="primary-video__metrics-views">{views}</p>
             </div>
                 <div className="primary-video__info">
-                    <p className="primary-video__info-date">{props.timestamp}</p>
-                    <p className="primary-video__info-likes">{props.likes}</p>
+                    <p className="primary-video__info-date">{timestamp}</p>
+                    <p className="primary-video__info-likes">{likes}</p>
                 </div>
             
-            <p className="primary-video__description">{props.description}</p>
+            <p className="primary-video__description">{description}</p>
         </div>
     )
 }

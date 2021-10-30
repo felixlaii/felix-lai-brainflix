@@ -1,0 +1,24 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/colors" as *;
+@use '../../styles/partials/global' as *;
+
+.video-comments {
+    @include brainflixpadding;
+
+    &__counter {
+        font-weight: 700;
+    }
+
+    &__input {
+        height: 6rem;
+        width: 20rem;
+        border-radius: 4px;
+        border-color: $secondarydark;
+
+        input::placeholder {
+            padding-left: 2rem;
+        }
+    }
+}
