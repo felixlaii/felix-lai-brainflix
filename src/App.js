@@ -5,8 +5,8 @@ import VideoSection from './components/VideoSection/VideoSection';
 import VideoSectionList from './components/VideoSectionList/VideoSectionList';
 // import VideoSectionItem from './components/VideoSectionItem/VideoSectionItem';
 import videoDetailsJSON from './data/video-details.json';
-// import VideoComments from './components/VideoComments/VideoComments';
-
+import VideoComments from './components/VideoComments/VideoComments';
+import CommentList from './components/CommentList/CommentList';
 
 class App extends React.Component {
   state = {
@@ -27,18 +27,15 @@ class App extends React.Component {
         <Header />
         <VideoSection 
         selectedVideo={this.state.selectedVideo}
-        // image={this.state.selectedVideo.image}
-        // title={this.state.selectedVideo.title}
-        // description={this.state.selectedVideo.description}
-        // channel={this.state.selectedVideo.channel}
-        // likes={this.state.selectedVideo.likes}
-        // views={this.state.selectedVideo.views}
-        // date={this.state.selectedVideo.timestamp}
         />
 
-        {/* <VideoComments
-        comments={this.state.selectedVideo.comments} /> */}
+        <VideoComments
+        selectedVideo={this.state.selectedVideo} />
         
+        <CommentList
+        selectedVideo={this.state.selectedVideo}
+        />
+
         <VideoSectionList
         videoList={filteredVideo}
         handleVideoSelect={this.handleVideoSelect}/>

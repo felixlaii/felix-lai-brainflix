@@ -1,14 +1,20 @@
 import './videocomments.scss';
 
+import SearchAva from '../../assets/images/Mohan-muruge.jpg';
+import AddComment from '../../assets/icons/add_comment.svg';
+
 function VideoComments(props) {
+   const { name, comment, timestamp } = props.selectedVideo;
 
     return (
         <div className="video-comments">
             <p className="video-comments__counter">3 Comments</p>
-            <h2 className="video-comments__title">JOIN THE CONVERSATION</h2>
+            <img className="video-comments__avatar" src={SearchAva} alt='comment form avatar' />
+            <img className="video-comments__addcomment" src={AddComment} alt='comment submit icon' />
             <div className="video-comments__form">
+                <label className="video-comments__label">JOIN THE CONVERSATION</label>
                 <input className="video-comments__input"type="text" name="name" placeholder="Add a new comment"></input>
-                {/* <p className="video-comments__comments">{props.comments}</p> */}
+                <input className= "video-comments__submit" type="submit" value="COMMENT"></input>
             </div>
         </div>
     )

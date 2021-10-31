@@ -1,3 +1,6 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/colors" as *;
+
 // @mixin tablet {
 //     @media screen {
         
@@ -21,4 +24,19 @@
 @mixin brainflixpadding {
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+@mixin buttonstyles {
+    background-color: $primarybrainlight;
+    color: $primarylight;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: none;
+}
+
+@mixin sectiontitlestyles {
+    color: $primarydark;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
 }

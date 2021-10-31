@@ -4,8 +4,6 @@ import SearchIcon from '../../assets/icons/search.svg';
 import SearchAva from '../../assets/images/Mohan-muruge.jpg';
 import './Header.scss';
 
-// const headerIconPath = (imageUrl) => ``
-
 const Header = () => {
     return (
     <nav className="primary-nav">

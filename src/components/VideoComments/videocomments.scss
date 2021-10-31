@@ -11,14 +11,93 @@
         font-weight: 700;
     }
 
+    &__label {
+        @include sectiontitlestyles;
+    }
+
+    &__form,
+    &__item {
+        position: relative; left: 5rem;
+    }
+
+    &__item {
+        width: 18rem;
+    }
+
+    &__avatar {
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        left: 1rem;
+        top: 4rem;
+        width: 2.5rem;
+        height: 5vh;
+
+        &--logo {
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            right: 4rem;
+            top: 4rem;
+            width: 2.5rem;
+            height: 5vh;
+        }
+    }
+
+    &__addcomment {
+        position: relative;
+        left: 3.5rem;
+        top: 11.3rem;
+        z-index: 1;
+    }
+
+    &__submit {
+        @include buttonstyles;
+        width: 18.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        margin-top: 1rem;
+        margin-right: 100%;
+        right: 5rem;
+    }
+
     &__input {
         height: 6rem;
-        width: 20rem;
+        width: 18rem;
         border-radius: 4px;
         border-color: $secondarydark;
 
         input::placeholder {
             padding-left: 2rem;
         }
+    }
+
+    &__list {
+        @include brainflixpadding;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__date {
+        color: $primarydark;
+    }
+
+    &__item {
+        border-bottom: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
+        border-top: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
+    }
+
+    &__nextcomment {
+        padding-left: 0;
     }
 }

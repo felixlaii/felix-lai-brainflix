@@ -5,7 +5,7 @@ import FullScreenIcon from '../../assets/icons/fullscren.svg';
 import VolumeUp from '../../assets/icons/volume_up.svg';
 
 function VideoSection(props) {
-    const { title, channel, image, description, views, likes, duration, video, timestamp, comments} = props.selectedVideo;
+    const { title, channel, image, description, views, likes, duration, timestamp } = props.selectedVideo;
 
     return (
         <div className="primary-video">
@@ -34,6 +34,7 @@ function VideoSection(props) {
                 </div>
             
             <p className="primary-video__description">{description}</p>
+            
         </div>
     )
 }
