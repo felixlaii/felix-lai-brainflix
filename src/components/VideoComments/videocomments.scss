@@ -7,8 +7,27 @@
 .video-comments {
     @include brainflixpadding;
 
+    @include tablet {
+        margin-left: 2rem;
+        margin-right: 0;
+    }
+    @include desktop {
+        margin-left: 2rem;
+    }
+
     &__counter {
         font-weight: 700;
+
+        @include tablet {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0rem;
+            padding-left: 0;
+        }
+
+        @include desktop {
+            margin-left: 2rem;
+        }
     }
 
     &__label {
@@ -63,8 +82,17 @@
         border-radius: 4px;
         font-size: 0.75rem;
         margin-top: 1rem;
-    
         right: 5rem;
+
+        @include tablet {
+            height: 2.5rem;
+            width: 8rem;
+            margin-left: 2rem;
+        }
+
+        @include desktop {
+            width: 11rem;
+        }
     }
 
     &__input {
@@ -72,6 +100,15 @@
         width: 18rem;
         border-radius: 4px;
         border-color: $secondarydark;
+
+        @include tablet {
+            height: 2.3rem;
+            width: 26rem;
+        }
+
+        @include desktop {
+            width: 40rem;
+        }
 
         input::placeholder {
             padding-left: 2rem;
@@ -95,7 +132,17 @@
     &__item {
         border-bottom: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
         border-top: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
+        
+        @include tablet {
+            width: 80%;
+        }
+
+        @include desktop {
+            width: 75.5vw;
+            margin-left: 2rem;
+        }
     }
+
 
     &__nextcomment {
         padding-left: 0;
