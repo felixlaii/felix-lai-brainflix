@@ -8,6 +8,13 @@
     @include flexcentercolumn;
     padding: 1rem;
 
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        height: 8vh;
+        width: 98%;
+    }
+
     &__logo {
         display: flex;
         justify-content: center;
@@ -15,6 +22,16 @@
         padding-bottom: 1rem;
         margin-right: 5rem;
         margin-left: 5rem;
+
+        @include tablet {
+          position: relative;
+          right: 7rem;
+          padding: 0;
+          margin: 1rem 2rem 1rem 0rem;
+          height: 2rem;
+          width: 7rem;
+          
+        }
     }
 
     &__search {
@@ -24,6 +41,12 @@
         margin-right: 5rem;
         border-color: $secondarydark;
         background-color: $secondarylight;
+
+        @include tablet {
+            height: 0.5rem;
+            width: 12rem;
+            margin-right: 1rem;
+        }
     }
 
     &__upload {
@@ -37,17 +60,33 @@
         font-weight: 700;
         border: none;
 
+        @include tablet {
+            width: 10rem;
+            height: 2.8rem;
+        }
+
         &--icon {
             @include iconpositions;
             top: 9.7rem;
             height: 1.5rem;
             margin-left: 1rem;
+
+            @include tablet {
+                top: 2.5rem;
+                left: 30.5rem;
+            }
         }
     }
 
     &__searchbar {
         @include flexcentercolumn;
         border: none;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline
+        }
 
         &--avatar {
             @include iconpositions;
@@ -58,6 +97,11 @@
             left: 20rem;
             top: 5rem;
             width: 2.5rem;
+
+            @include tablet {
+                left: 41.3rem;
+                top: 2rem;
+            }
         }
         
         &--icon {
@@ -65,6 +109,11 @@
             top: 5.5rem;
             height: 1.7rem;
             left: 1.8rem;    
+
+            @include tablet {
+                top: 2.5rem;
+                left: 18rem;
+            }
         }
 
     }
