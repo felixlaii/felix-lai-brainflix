@@ -8,11 +8,19 @@
 
     &__nextvideo {
         padding-left: 1rem;
+
+        @include tablet {
+            margin-left: 2rem;
+        }
     }
 
     &__title {
         color: $primarydark;
         padding-left: 1rem;
         font-size: 1rem;
+
+        @include tablet {
+            margin-left: 2rem;
+        }
     }
 }
