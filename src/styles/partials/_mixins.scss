@@ -1,12 +1,17 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/colors" as *;
 
-// @mixin tablet {
-//     @media screen {
-        
-//     }
-    
-// }
+@mixin tablet {
+    @media (min-width: $tablet){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
 
 @mixin flexcentercolumn {
     display: flex;
