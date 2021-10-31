@@ -6,6 +6,7 @@ import VolumeUp from '../../assets/icons/volume_up.svg';
 import VideoViews from '../../assets/icons/views.svg';
 import VideoLikes from '../../assets/icons/likes.svg';
 
+
 function VideoSection(props) {
     const { title, channel, image, description, views, likes, duration, timestamp } = props.selectedVideo;
 
@@ -24,12 +25,13 @@ function VideoSection(props) {
                 </div>
                 <div className="primary-video__icons--scrub">
                     <img className="primary-video__icons--scrubicon" src={ScrubControl} alt="Scrub Icon" />
+                    <p className="primary-video__duration">0:00 / {duration}</p>
                 </div>
                 <div className="primary-video__icons--videoadjustments">
                     <img className="primary-video__icons--screenadjicon" src={FullScreenIcon} alt="Full Screen Icon" />
                     <img className="primary-video__icons--volumeupicon" src={VolumeUp} alt="Volume Up" />
                 </div>
-                </div>
+            </div>
                     <img className="primary-video__video" src={image} alt="BMX Rampage" />
             <h2 className="primary-video__title">{title}</h2>
 
