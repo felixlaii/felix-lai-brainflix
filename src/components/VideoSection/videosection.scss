@@ -23,15 +23,41 @@
 
     &__metrics {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        border-bottom: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
+        border-top: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
+    }
 
-        &-channel,
-        &-views {
-            display: flex;
-            flex-direction: column;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @include brainflixpadding;
+        padding-right: 9rem;
+
+        &-date {
+            color: $primarydark;
         }
     }
 
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        &-views,
+        &-likes {
+            color: $primarydark;
+            margin-left: 1rem;
+        }
+    }
+    &__reachability,
+    &__likeability {
+        display: flex;
+        flex-direction: row;
+    }
     &__icons {
         
 
