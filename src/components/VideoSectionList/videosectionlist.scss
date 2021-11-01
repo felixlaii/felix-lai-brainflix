@@ -12,6 +12,11 @@
         @include tablet {
             margin-left: 2rem;
         }
+
+        @include desktop {
+            position: absolute;
+            right: 5rem;
+        }
     }
 
     &__title {
