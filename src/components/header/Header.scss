@@ -41,12 +41,25 @@
         margin-right: 5rem;
         border-color: $secondarydark;
         background-color: $secondarylight;
+        background-image: url(../../assets/icons/search.svg);
+        background-repeat: no-repeat;
+        background-position: 30%;
+        background-position: left;
 
         @include tablet {
             height: 0.5rem;
             width: 12rem;
             margin-right: 1rem;
         }
+
+        // &--avatar {
+        //     background-image: url(../../assets/images/Mohan-muruge.jpg);
+        //     background-position: center;
+        //     background-repeat: no-repeat;
+        //     background-size: cover; 
+        //     position: absolute;
+        
+        // }
     }
 
     &__upload {
@@ -59,6 +72,10 @@
         font-size: 0.75rem;
         font-weight: 700;
         border: none;
+        background-image: url(../../assets/icons/upload.svg);
+        background-repeat: no-repeat;
+        background-position: 30%;
+        background-position: left;
 
         @include tablet {
             width: 10rem;
@@ -89,14 +106,15 @@
         }
 
         &--avatar {
-            @include iconpositions;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            border-radius: 50%;
-            left: 20rem;
-            top: 5rem;
-            width: 2.5rem;
+            // background-image: url(../../assets/images/Mohan-muruge.jpg);
+            // @include iconpositions;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // background-size: cover;
+            // border-radius: 50%;
+            // left: 20rem;
+            // top: 5rem;
+            // width: 2.5rem;
 
             @include tablet {
                 left: 41.3rem;
@@ -104,17 +122,17 @@
             }
         }
         
-        &--icon {
-            @include iconpositions;
-            top: 5.5rem;
-            height: 1.7rem;
-            left: 1.8rem;    
+        // &--icon {
+        //     @include iconpositions;
+        //     top: 5.5rem;
+        //     height: 1.7rem;
+        //     left: 1.8rem;    
 
-            @include tablet {
-                top: 2.5rem;
-                left: 18rem;
-            }
-        }
+        //     @include tablet {
+        //         top: 2.5rem;
+        //         left: 18rem;
+        //     }
+        // }
 
     }
 
