@@ -8,7 +8,7 @@ import VideoLikes from '../../assets/icons/likes.svg';
 
 
 function VideoSection(props) {
-    const { title, channel, image, description, views, likes, duration, timestamp } = props.selectedVideo;
+    const { title, channel, image, description, views, likes, duration, timestamp, video } = props.selectedVideo;
 
     let postedDate = new Date(timestamp);
 
@@ -19,20 +19,10 @@ function VideoSection(props) {
 
     return (
         <div className="primary-video">
-            <div className="primary-video__icons">
-                <div className="primary-video__icons--play">
-                    <img className="primary-video__icons--playicon" src={PlayIcon} alt="Play Icon" />
-                </div>
-                <div className="primary-video__icons--scrub">
-                    <img className="primary-video__icons--scrubicon" src={ScrubControl} alt="Scrub Icon" />
-                    <p className="primary-video__duration">0:00 / {duration}</p>
-                </div>
-                <div className="primary-video__icons--videoadjustments">
-                    <img className="primary-video__icons--screenadjicon" src={FullScreenIcon} alt="Full Screen Icon" />
-                    <img className="primary-video__icons--volumeupicon" src={VolumeUp} alt="Volume Up" />
-                </div>
+            <div className="primary-video__videoicon">
+                <video className="primary-video__video" poster={image} controls></video>
             </div>
-                    <img className="primary-video__video" src={image} alt="BMX Rampage" />
+           
             <h2 className="primary-video__title">{title}</h2>
 
             <div className="primary-video__metrics">
@@ -52,7 +42,6 @@ function VideoSection(props) {
                 </div>
             </div>
             <p className="primary-video__description">{description}</p>
-            
         </div>
     )
 }

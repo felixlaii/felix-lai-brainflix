@@ -14,7 +14,8 @@
 
     &__video {
         object-fit: contain;
-        width: 95vw;
+        width: 100vw;
+        background-image: url(../../assets/icons/play.svg);
 
         @include tablet {
             width: 84.9vw;
