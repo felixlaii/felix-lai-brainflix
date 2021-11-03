@@ -113,6 +113,10 @@
         }
     }
 
+    &__upload:hover {
+        background-color: $secondarybrainlight;
+    }
+
     &__searchbar {
         @include flexcentercolumn;
         border: none;
@@ -161,5 +165,5 @@
 }
 
 input::placeholder {
-    padding-left: 3rem;
+    padding-left: 1rem;
 }
