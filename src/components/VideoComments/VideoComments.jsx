@@ -8,12 +8,14 @@ function VideoComments(props) {
     return (
         <div className="video-comments">
             <p className="video-comments__counter">3 Comments</p>
-            <img className="video-comments__avatar" src={SearchAva} alt='comment form avatar' />
            
-                <label className="video-comments__label">JOIN THE CONVERSATION</label>
                 <div className="video-comments__form">
-                <input className="video-comments__input"type="text" name="name" placeholder="Add a new comment"></input>
-                <input className= "video-comments__submit" type="submit" value="COMMENT"></input>
+                    <label className="video-comments__label">JOIN THE CONVERSATION</label>
+                    <div className="video-comments__inputava">
+                        <img className="video-comments__avatar" src={SearchAva} alt='comment form avatar' />
+                        <input className="video-comments__input"type="text" name="name" placeholder="Add a new comment"></input>
+                    </div>
+                    <input className= "video-comments__submit" type="submit" value="COMMENT"></input>
                 </div>
         </div>
     )

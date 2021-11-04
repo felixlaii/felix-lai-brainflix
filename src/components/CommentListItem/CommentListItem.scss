@@ -1,0 +1,46 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/colors" as *;
+@use '../../styles/partials/global' as *;
+
+.commentlist-item {
+    
+    &__item {
+    position: relative; left: 5rem;
+    width: 18rem;
+    border-bottom: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
+    border-top: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
+    
+    @include tablet {
+        width: 80%;
+    }
+
+    @include desktop {
+        width: 75.5vw;
+        margin-left: 2rem;
+    }
+}
+
+    &__date {
+        color: $primarydark;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__avatar--logo {
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        right: 4rem;
+        top: 4rem;
+        width: 2.5rem;
+        height: 5vh;
+    }
+}

@@ -34,13 +34,8 @@
         @include sectiontitlestyles;
     }
 
-    &__form,
-    &__item {
+    &__form {
         position: relative; left: 5rem;
-    }
-
-    &__item {
-        width: 18rem;
     }
 
     &__avatar {
@@ -53,18 +48,6 @@
         top: 4rem;
         width: 2.5rem;
         height: 5vh;
-
-        &--logo {
-            position: relative;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            border-radius: 50%;
-            right: 4rem;
-            top: 4rem;
-            width: 2.5rem;
-            height: 5vh;
-        }
     }
 
     &__submit {
@@ -118,38 +101,5 @@
 
     &__input:active {
         border-color: $secondarybrainlight;
-    }
-
-    &__list {
-        @include brainflixpadding;
-    }
-
-    &__info {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    &__date {
-        color: $primarydark;
-    }
-
-    &__item {
-        border-bottom: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
-        border-top: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
-        
-        @include tablet {
-            width: 80%;
-        }
-
-        @include desktop {
-            width: 75.5vw;
-            margin-left: 2rem;
-        }
-    }
-
-
-    &__nextcomment {
-        padding-left: 0;
     }
 }
