@@ -23,6 +23,7 @@
         margin-right: 0;
     }
 
+    // BrainFlix Logo
     &__logo {
         display: flex;
         justify-content: center;
@@ -47,11 +48,32 @@
         }
     }
 
+    &__searchandupload {
+        @include flexcentercolumn;
+        border: none;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline
+        }
+
+        @include desktop {
+            margin-left: 24rem;
+        }
+    }
+
+    &__searchbar {
+        display: flex;
+        justify-content: baseline;
+    }
+
     &__search {
         padding-top: 1rem;
         padding-bottom: 1rem;
+        padding-right: 8rem;
         border-radius: 4px;
-        margin-right: 5rem;
+        margin-right: 2rem;
         border-color: $secondarydark;
         background-color: $secondarylight;
         background-image: url(../../assets/icons/search.svg);
@@ -65,14 +87,12 @@
             margin-right: 1rem;
         }
 
-        // &--avatar {
-        //     background-image: url(../../assets/images/Mohan-muruge.jpg);
-        //     background-position: center;
-        //     background-repeat: no-repeat;
-        //     background-size: cover; 
-        //     position: absolute;
-        
-        // }
+        &--avatar {
+            border-radius: 50%;
+            position: relative;
+            max-width: 3rem;
+            max-height: 3rem;
+        }
     }
 
     &__upload {
@@ -94,74 +114,11 @@
             width: 10rem;
             height: 2.8rem;
         }
-
-        @include desktop {
-
-        }
-
-
-        &--icon {
-            @include iconpositions;
-            top: 9.7rem;
-            height: 1.5rem;
-            margin-left: 1rem;
-
-            @include tablet {
-                top: 2.5rem;
-                left: 30.5rem;
-            }
-        }
     }
 
     &__upload:hover {
         background-color: $secondarybrainlight;
     }
-
-    &__searchbar {
-        @include flexcentercolumn;
-        border: none;
-
-        @include tablet {
-            display: flex;
-            flex-direction: row;
-            align-items: baseline
-        }
-
-        @include desktop {
-            margin-left: 24rem;
-        }
-
-        &--avatar {
-            // background-image: url(../../assets/images/Mohan-muruge.jpg);
-            // @include iconpositions;
-            // background-position: center;
-            // background-repeat: no-repeat;
-            // background-size: cover;
-            // border-radius: 50%;
-            // left: 20rem;
-            // top: 5rem;
-            // width: 2.5rem;
-
-            @include tablet {
-                left: 41.3rem;
-                top: 2rem;
-            }
-        }
-        
-        // &--icon {
-        //     @include iconpositions;
-        //     top: 5.5rem;
-        //     height: 1.7rem;
-        //     left: 1.8rem;    
-
-        //     @include tablet {
-        //         top: 2.5rem;
-        //         left: 18rem;
-        //     }
-        // }
-
-    }
-
 }
 
 input::placeholder {
