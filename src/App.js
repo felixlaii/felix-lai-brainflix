@@ -1,12 +1,14 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/header/Header';
+import Header from './components/Header/Header';
 import VideoSection from './components/VideoSection/VideoSection';
 import VideoSectionList from './components/VideoSectionList/VideoSectionList';
-// import VideoSectionItem from './components/VideoSectionItem/VideoSectionItem';
 import videoDetailsJSON from './data/video-details.json';
 import VideoComments from './components/VideoComments/VideoComments';
 import CommentList from './components/CommentList/CommentList';
+import UploadPage from './components/UploadPage/Upload';
+
 
 class App extends React.Component {
   state = {
@@ -24,10 +26,21 @@ class App extends React.Component {
     
     return (
       <>
+      {/* <VideoSection 
+            selectedVideo={this.state.selectedVideo}
+            /> */}
+      <BrowserRouter>
         <Header />
-        <VideoSection 
-        selectedVideo={this.state.selectedVideo}
-        />
+        <Switch>
+          
+          <Route path="/" exact render={() => {
+            return <VideoSection selectedVideo={this.state.selectedVideo} />;
+          }}/>
+          <Route path="/Upload" component={UploadPage} />
+          {/* <Route path="/VideoSection/:id" component={VideoSection} /> */}
+          
+        </Switch>
+        </BrowserRouter>
 
         <VideoComments
         selectedVideo={this.state.selectedVideo} />

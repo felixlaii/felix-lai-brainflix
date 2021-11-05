@@ -1,5 +1,6 @@
 import BrainFlixLogo from '../../assets/logo/BrainFlix-logo.svg';
 import SearchAva from '../../assets/images/Mohan-muruge.jpg';
+import { Link } from 'react-router-dom';
 import './Header.scss';
 
 const Header = () => {
@@ -11,7 +12,9 @@ const Header = () => {
                 <input className="primary-nav__search" type="text" name="search" placeholder="Search" />
                 <img className="primary-nav__search--avatar" src={SearchAva} alt="Search Bar Avatar" />
             </div>
+            <Link to="/Upload">
             <input className= "primary-nav__upload" type="submit" value="UPLOAD"></input>
+            </Link>
         </div>
 
     </nav>

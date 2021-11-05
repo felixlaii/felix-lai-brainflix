@@ -1,14 +1,11 @@
 import './videosection.scss';
-import PlayIcon from '../../assets/icons/play.svg';
-import ScrubControl from '../../assets/icons/scrub.svg';
-import FullScreenIcon from '../../assets/icons/fullscren.svg';
-import VolumeUp from '../../assets/icons/volume_up.svg';
 import VideoViews from '../../assets/icons/views.svg';
 import VideoLikes from '../../assets/icons/likes.svg';
+import axios from 'axios';
+import { Component } from 'react'
 
-
-function VideoSection(props) {
-    const { title, channel, image, description, views, likes, duration, timestamp, video } = props.selectedVideo;
+function VideoSection (props) {
+    const { title, channel, image, description, views, likes, timestamp } = props.selectedVideo;
 
     let postedDate = new Date(timestamp);
 
@@ -16,7 +13,15 @@ function VideoSection(props) {
     postedDate = postedDate.replace(/ ,/g, '')
     postedDate = postedDate.trim();
     console.log(postedDate)
+    // render (props) {
+    // const { title, channel, image, description, views, likes, timestamp } = props.selectedVideo;
 
+    // let postedDate = new Date(timestamp);
+
+    // postedDate = postedDate.toLocaleString().slice(0,9);
+    // postedDate = postedDate.replace(/ ,/g, '')
+    // postedDate = postedDate.trim();
+    // console.log(postedDate)
     return (
         <div className="primary-video">
             <div className="primary-video__videoicon">
@@ -45,5 +50,7 @@ function VideoSection(props) {
         </div>
     )
 }
+// }
+
 
 export default VideoSection;
