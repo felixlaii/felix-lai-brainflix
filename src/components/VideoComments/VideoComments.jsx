@@ -1,9 +1,7 @@
 import './videocomments.scss';
-
 import SearchAva from '../../assets/images/Mohan-muruge.jpg';
 
-function VideoComments(props) {
-   const { name, comment, timestamp } = props.selectedVideo;
+function VideoComments() {
 
     return (
         <div className="video-comments">

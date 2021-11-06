@@ -32,14 +32,15 @@
 
     &__label {
         @include sectiontitlestyles;
+        margin-left: 2.5rem;
     }
 
-    &__form {
-        position: relative; left: 5rem;
+    &__inputava {
+        display: flex;
+        flex-direction: row;
     }
 
     &__avatar {
-        position: relative;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -48,6 +49,7 @@
         top: 4rem;
         width: 2.5rem;
         height: 5vh;
+        margin-right: 1rem;
     }
 
     &__submit {
@@ -55,10 +57,10 @@
         width: 18.5rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
+        margin-left: 3.5rem;
         border-radius: 4px;
         font-size: 0.75rem;
         margin-top: 1rem;
-        right: 5rem;
         background-image: url(../../assets/icons/add_comment.svg);
         background-repeat: no-repeat;
         background-position: 30%;

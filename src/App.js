@@ -12,8 +12,6 @@ import Home from './Pages/Home/Home';
 
 class App extends React.Component {
 
-
- 
   render (){
     
     return (
@@ -27,11 +25,12 @@ class App extends React.Component {
           
           <Route path="/" exact component={Home} />
           <Route path="/video/:videoId" component={Home} />
-          
           <Route path="/Upload" component={UploadPage} />
           
         </Switch>
         </BrowserRouter>  
+
+        
     </>
   );
 }

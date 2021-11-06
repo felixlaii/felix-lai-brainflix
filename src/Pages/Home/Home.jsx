@@ -1,4 +1,7 @@
 import './Home.scss'
+import '../../components/VideoSectionItem/videosectionitem.scss';
+import '../../components/VideoSectionList/videosectionlist.scss';
+
 import VideoViews from '../../assets/icons/views.svg';
 import VideoLikes from '../../assets/icons/likes.svg';
 import axios from 'axios';
@@ -7,6 +10,7 @@ import VideoSectionList from '../../components/VideoSectionList/VideoSectionList
 import VideoSectionItem from '../../components/VideoSectionItem/VideoSectionItem';
 import CommentListItem from '../../components/CommentListItem/CommentListItem'
 import CommentList from '../../components/CommentList/CommentList';
+import VideoComments from '../../components/VideoComments/VideoComments';
 class Home extends Component {
     // const { title, channel, image, description, views, likes, timestamp } = props.selectedVideo;
 
@@ -31,12 +35,6 @@ class Home extends Component {
         videoList: []
     }
 
-    // handleVideoSelect = id => {
-    //     this.setState({
-    //       selectedVideo:videoDetailsJSON.find(video => id === video.id)
-    //     })
-    //   }
- 
     getSelectedVideo = (videoId) => {
         axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=dc4a6b49-ab20-4995-a836-bec86ffba736`)
             .then((response) => {
@@ -102,8 +100,10 @@ class Home extends Component {
            <p className="primary-video__description">{this.state.selectedVideo.description}</p>
         </div>
 
+        <VideoComments />
+
         <div className="comment-list__container">
-        <ul className="comment-list__nextcomment">
+                <ul className="comment-list__nextcomment">
                     {this.state.selectedVideo.comments.map(comment => (
                         <CommentListItem
                         key={comment.id}
@@ -114,7 +114,8 @@ class Home extends Component {
                         />
                     ))}   
                 </ul>
-                </div>
+        </div>
+        
     
         <ul className="video-list__nextvideo">
             {filteredVideo.map(video => (
@@ -127,14 +128,11 @@ class Home extends Component {
                 />
             ))}
         </ul>
-       
-      
-        
         </>
     )
 }
 }
-// }
+
 
 
 export default Home;

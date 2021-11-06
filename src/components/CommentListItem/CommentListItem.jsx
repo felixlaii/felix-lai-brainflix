@@ -11,7 +11,8 @@ function CommentListItem({ name, comment, timestamp}) {
     
     return (
        <div className="commentlist-item__item"> 
-       <img className="commentlist-item__avatar--logo" src={SearchAva} alt='comment form avatar' />
+       {/* <img className="commentlist-item__avatar--logo" src={SearchAva} alt='comment form avatar' /> */}
+       <div className="commentlist-item__avatar--logo"></div>
             <div className="commentlist-item__info">
                 <p className="commentlist-item__detail"><strong>{name}</strong></p>
                 <p className="commentlist-item__date">{postedDate}</p>
