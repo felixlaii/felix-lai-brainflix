@@ -2,7 +2,7 @@ import CommentListItem from '../CommentListItem/CommentListItem';
 import '../CommentList/CommentList.scss';
 
 function CommentList({selectedVideo}) {
-console.log(selectedVideo.comments)
+    console.log(selectedVideo)
     return(
         <div className="comment-list__list">
                 <ul className="comment-list__nextcomment">
