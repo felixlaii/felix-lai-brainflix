@@ -1,0 +1,70 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/colors" as *;
+@use '../../styles/partials/global' as *;
+
+.upload-section {
+    border-top: 1px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        font-weight: 700;
+        margin-left: 1rem;
+    }
+
+    &__thumbnail {
+        width: 15rem;
+        height: 18rem;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-left: 1rem;
+    }
+
+    &__label {
+        @include sectiontitlestyles;
+        margin-top: 1rem;
+    }
+
+    &__input {
+        @include inputstyles;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    &__description {
+
+        &--input {
+            @include inputstyles;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            height: 3.5rem;
+        }
+    }
+
+    &__publish {
+        @include submitstyles;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        background-image: url(../../assets/icons/publish.svg);
+        background-repeat: no-repeat;
+        background-position: 30%;
+        background-position: left;
+
+    }
+    &__publish:hover {
+        background-color: $secondarybrainlight;
+    }
+
+    &__cancel {
+        @include submitstyles;
+        background-color: $primarylight;
+        color: $primarybrainlight;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-left: 9.4rem;
+        padding-right: 9.4rem;
+    }
+}

@@ -96,15 +96,9 @@
     }
 
     &__upload {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        margin-top: 1rem;
-        border-radius: 4px;
-        background-color: $primarybrainlight;
-        color: $primarylight;
-        font-size: 0.75rem;
-        font-weight: 700;
-        border: none;
+        @include submitstyles;
+        padding-left: 9.4rem;
+        padding-right: 9.4rem;
         background-image: url(../../assets/icons/upload.svg);
         background-repeat: no-repeat;
         background-position: 30%;

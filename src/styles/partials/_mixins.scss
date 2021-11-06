@@ -45,3 +45,23 @@
     font-size: 1rem;
     font-weight: 700;
 }
+
+@mixin inputstyles {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 8rem;
+    border-radius: 4px;
+    border-color: $secondarydark;
+}
+
+@mixin submitstyles {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: $primarybrainlight;
+    color: $primarylight;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+}

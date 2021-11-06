@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
-import VideoSection from './components/VideoSection/VideoSection';
 // import VideoSectionList from './components/VideoSectionList/VideoSectionList';
 import videoDetailsJSON from './data/video-details.json';
 import VideoComments from './components/VideoComments/VideoComments';
