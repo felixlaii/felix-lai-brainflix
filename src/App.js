@@ -16,17 +16,12 @@ class App extends React.Component {
     
     return (
       <>
-  
       <BrowserRouter>
         <Header />
-    
-
         <Switch>
-          
           <Route path="/" exact component={Home} />
           <Route path="/video/:videoId" component={Home} />
           <Route path="/Upload" component={UploadPage} />
-          
         </Switch>
         </BrowserRouter>  
 

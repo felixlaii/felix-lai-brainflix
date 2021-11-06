@@ -1,6 +1,4 @@
-import VideoSectionItem from '../VideoSectionItem/VideoSectionItem';
 import './videosectionlist.scss';
-import axios from 'axios';
 import {Component} from 'react';
 
 class VideoSectionList extends Component {

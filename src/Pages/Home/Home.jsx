@@ -1,5 +1,5 @@
 import './Home.scss'
-import '../../components/VideoSectionItem/videosectionitem.scss';
+import '../../components/VideoSectionItem/VideoSectionItem.scss';
 import '../../components/VideoSectionList/videosectionlist.scss';
 
 import VideoViews from '../../assets/icons/views.svg';
@@ -9,8 +9,9 @@ import { Component } from 'react'
 import VideoSectionList from '../../components/VideoSectionList/VideoSectionList';
 import VideoSectionItem from '../../components/VideoSectionItem/VideoSectionItem';
 import CommentListItem from '../../components/CommentListItem/CommentListItem'
-import CommentList from '../../components/CommentList/CommentList';
 import VideoComments from '../../components/VideoComments/VideoComments';
+
+
 class Home extends Component {
     // const { title, channel, image, description, views, likes, timestamp } = props.selectedVideo;
 
@@ -112,11 +113,12 @@ class Home extends Component {
                         timestamp={comment.timestamp}
                         comment={comment.comment}
                         />
-                    ))}   
+                        ))}   
                 </ul>
         </div>
         
-    
+        <VideoSectionList />
+  
         <ul className="video-list__nextvideo">
             {filteredVideo.map(video => (
                 <VideoSectionItem
@@ -128,6 +130,7 @@ class Home extends Component {
                 />
             ))}
         </ul>
+    
         </>
     )
 }
