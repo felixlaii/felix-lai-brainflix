@@ -2,11 +2,12 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/colors" as *;
-@use '../../styles/partials/global' as *;
+// @use '../../styles/partials/global' as *;
 
 .comment-list {
-    
+    padding-left: 0;
+
     &__nextcomment {
-        padding-left: 0;
+        list-style-type: none;
     }
-}
+}   

@@ -46,7 +46,6 @@ class Home extends Component {
     componentDidUpdate(previousProps) {
         const previousVideoId = previousProps.match.params.videoId
         const currentVideoId = this.props.match.params.videoId
-    console.log(previousVideoId === currentVideoId)    
 
     if(previousVideoId !== currentVideoId) {
         this.getSelectedVideo(currentVideoId)

@@ -7,7 +7,7 @@ function VideoSectionItem({title, image, channel, id}) {
        <div className="video-list__item"> 
            <Link className="video-list__link" to={"/video/"+id}> 
            <div className="video-list__thumbnail">
-                <img className="video-list__image" src={image}/>
+                <img className="video-list__image" src={image} alt="video thumbnail"/>
             </div>
             <ul className="video-list__info">
                 <li className="video-list__detail"><strong>{title}</strong></li>
