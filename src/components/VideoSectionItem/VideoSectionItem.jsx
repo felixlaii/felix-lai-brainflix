@@ -1,4 +1,4 @@
-import './VideoSectionItem.scss'
+import './videosectionitem.scss'
 import '../VideoSectionList/videosectionlist.scss'
 import { Link } from 'react-router-dom'
 

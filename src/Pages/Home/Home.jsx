@@ -1,5 +1,5 @@
 import './Home.scss'
-import '../../components/VideoSectionItem/VideoSectionItem.scss';
+import '../../components/VideoSectionItem/videosectionitem.scss';
 import '../../components/VideoSectionList/videosectionlist.scss';
 
 import VideoViews from '../../assets/icons/views.svg';
@@ -13,23 +13,6 @@ import VideoComments from '../../components/VideoComments/VideoComments';
 
 
 class Home extends Component {
-    // const { title, channel, image, description, views, likes, timestamp } = props.selectedVideo;
-
-    // let postedDate = new Date(timestamp);
-
-    // postedDate = postedDate.toLocaleString().slice(0,9);
-    // postedDate = postedDate.replace(/ ,/g, '')
-    // postedDate = postedDate.trim();
-    // console.log(postedDate)
-    // render (props) {
-    // const { title, channel, image, description, views, likes, timestamp } = props.selectedVideo;
-
-    // let postedDate = new Date(timestamp);
-
-    // postedDate = postedDate.toLocaleString().slice(0,9);
-    // postedDate = postedDate.replace(/ ,/g, '')
-    // postedDate = postedDate.trim();
-    // console.log(postedDate)
 
     state = {
         selectedVideo: {},
@@ -71,7 +54,14 @@ class Home extends Component {
 }
     render() {
         if (!this.state.selectedVideo.id) return <div><p className="loading">Loading...</p></div>
+
         const filteredVideo = this.state.videoList.filter(video => video.id !== this.state.selectedVideo.id)
+        
+        let postedDate = new Date(this.state.selectedVideo.timestamp);
+
+        postedDate = postedDate.toLocaleString().slice(0,9);
+        postedDate = postedDate.replace(/ ,/g, '')
+        postedDate = postedDate.trim();
 
     return (
         <>
@@ -85,7 +75,7 @@ class Home extends Component {
             <div className="primary-video__metrics">
                 <div className="primary-video__container">
                     <p className="primary-video__container-channel"><strong>By {this.state.selectedVideo.channel}</strong></p>
-                    <p className="primary-video__container-date">{this.state.selectedVideo.timestamp}</p>
+                    <p className="primary-video__container-date">{postedDate}</p>
                 </div>
                 <div className="primary-video__info">
                     <div className="primary-video__reachability">

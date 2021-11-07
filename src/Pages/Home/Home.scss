@@ -106,6 +106,7 @@
         justify-content: space-around;
         @include brainflixpadding;
         padding-right: 9rem;
+        padding-left: 0;
 
         @include tablet {
             display: flex;
