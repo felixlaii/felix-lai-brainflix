@@ -10,22 +10,11 @@
     @include tablet {
         width: 70vw;
     }
-
-    // &__item {
-    //     display: flex;
-    //     flex-direction: row;
-    //     width: 100vw;
-
-    // }
-
     &__info {
-        // display: flex;
-        // justify-content: flex-end;
-        // justify-content: space-around;
-        // flex-direction: column;
+  
         list-style: none;
         padding-left: 1rem;
-        width: 7rem;
+
         text-decoration: none;
 
         @include tablet {
@@ -49,6 +38,7 @@
     }
 
     &__detail {
+        display: flex;
         color: $primarybraindark;
         text-decoration: none;
        
