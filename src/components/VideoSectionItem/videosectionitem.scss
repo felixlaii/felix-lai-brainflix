@@ -11,19 +11,22 @@
         width: 70vw;
     }
 
-    &__item {
-        display: flex;
-        flex-direction: row;
+    // &__item {
+    //     display: flex;
+    //     flex-direction: row;
+    //     width: 100vw;
 
-    }
+    // }
 
     &__info {
-        display: flex;
-        justify-content: flex-end;
-        justify-content: space-around;
-        flex-direction: column;
+        // display: flex;
+        // justify-content: flex-end;
+        // justify-content: space-around;
+        // flex-direction: column;
         list-style: none;
         padding-left: 1rem;
+        width: 7rem;
+        text-decoration: none;
 
         @include tablet {
             width: 13rem;
@@ -43,5 +46,19 @@
             width: 11.5rem;
         }
     
+    }
+
+    &__detail {
+        color: $primarybraindark;
+        text-decoration: none;
+       
+    }
+
+    &__link {
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        
+        
     }
 }
