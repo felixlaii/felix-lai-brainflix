@@ -1,15 +1,15 @@
-import './Home.scss'
-import '../../components/VideoSectionItem/videosectionitem.scss';
-import '../../components/VideoSectionList/videosectionlist.scss';
-
-import VideoViews from '../../assets/icons/views.svg';
-import VideoLikes from '../../assets/icons/likes.svg';
 import axios from 'axios';
 import { Component } from 'react'
 import VideoSectionList from '../../components/VideoSectionList/VideoSectionList';
 import VideoSectionItem from '../../components/VideoSectionItem/VideoSectionItem';
 import CommentListItem from '../../components/CommentListItem/CommentListItem'
 import VideoComments from '../../components/VideoComments/VideoComments';
+import './Home.scss'
+import '../../components/VideoSectionItem/videosectionitem.scss';
+import '../../components/VideoSectionList/videosectionlist.scss';
+import VideoViews from '../../assets/icons/views.svg';
+import VideoLikes from '../../assets/icons/likes.svg';
+
 
 
 class Home extends Component {
@@ -26,7 +26,7 @@ class Home extends Component {
                     selectedVideo: response.data
                 })
             })
-            .catch((error) => console.log(error))
+            .catch((error) => (error))
     }
 
     componentDidMount() {
@@ -39,7 +39,7 @@ class Home extends Component {
 
                 this.getSelectedVideo(videoId)
             })
-            .catch((error) => console.log(error))
+            .catch((error) => (error))
     }
 
 
@@ -93,17 +93,17 @@ class Home extends Component {
         <VideoComments />
 
         <div className="comment-list__container">
-                <ul className="comment-list__nextcomment">
-                    {this.state.selectedVideo.comments.map(comment => (
-                        <CommentListItem
-                        key={comment.id}
-                        id={comment.id}
-                        name={comment.name}
-                        timestamp={comment.timestamp}
-                        comment={comment.comment}
-                        />
-                        ))}   
-                </ul>
+            <ul className="comment-list__nextcomment">
+                {this.state.selectedVideo.comments.map(comment => (
+                    <CommentListItem
+                    key={comment.id}
+                    id={comment.id}
+                    name={comment.name}
+                    timestamp={comment.timestamp}
+                    comment={comment.comment}
+                    />
+                    ))}   
+            </ul>
         </div>
         
         <VideoSectionList />
@@ -119,7 +119,6 @@ class Home extends Component {
                 />
             ))}
         </ul>
-    
         </>
     )
 }

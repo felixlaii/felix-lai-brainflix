@@ -8,7 +8,7 @@
 .primary-video {
     
     @include desktop {
-        width: 95vw;
+        // width: 95vw;
         margin-right: 0;
     }
 
@@ -18,13 +18,13 @@
         background-image: url(../../assets/icons/play.svg);
 
         @include tablet {
-            width: 84.9vw;
+            width: 87.5vw;
             border-right: 3rem solid $secondarybraindark; 
             border-left: 3rem solid $secondarybraindark; 
         }
 
         @include desktop {
-            width: 75.5vw;
+            width: 79.7vw;
             border-right: 8rem solid $secondarybraindark; 
             border-left: 8rem solid $secondarybraindark; 
             }
@@ -111,6 +111,7 @@
         @include tablet {
             display: flex;
             flex-direction: row;
+            margin-left: 1rem;
             
         }
 
@@ -131,7 +132,9 @@
         @include tablet {
             display: flex;
             flex-direction: row;
+            margin-left: 6rem;
         }
+
         
         &-views,
         &-likes {
