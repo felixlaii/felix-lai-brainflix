@@ -2,14 +2,32 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Ruffles from '../../assets/images/ruffles.jpg'
 import './Upload.scss'
+import {Component} from 'react'
 
-function UploadPage() {
+class UploadPage extends Component {
+    state ={
+        title: "",
+        description: "",
+    };
+
+    handleChange = (event) => {
+        this.setState({
+            [event.target.title]: event.target.value,
+        });
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+
+        alert("You have successfully uploaded your video!")
+    }
+    render() {
     return (
         <div>
 
             <div className="upload-section">
                 <h1 className="upload-section__title">Upload Video</h1>
-                <form className="upload-section__form">
+                <form className="upload-section__form" onSubmit={this.handleSubmit}>
                     <label className="upload-section__label">VIDEO THUMBNAIL</label>
                     <img className="upload-section__thumbnail" src={Ruffles} alt="ruffles thumbnail" />
 
@@ -19,8 +37,9 @@ function UploadPage() {
                     <label className="upload-section__label">ADD A VIDEO DESCRIPTION</label>
                     <input className="upload-section__description--input" type="text" name="title" placeholder="Add a description to your video"></input>
 
-                    <input className= "upload-section__publish" type="submit" value="PUBLISH"></input>
-
+                  
+                    <input className="upload-section__publish" type="submit" value="PUBLISH"></input>
+                  
                     <Link to="/">
                     <input className= "upload-section__cancel" type="submit" value="CANCEL"></input>
                     </Link>
@@ -29,6 +48,7 @@ function UploadPage() {
             </div>
         </div>
     )
+}
 }
 
 export default UploadPage
