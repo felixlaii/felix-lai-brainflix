@@ -43,5 +43,9 @@
         top: 4rem;
         width: 2.5rem;
         height: 5vh;
+
+        @include tablet {
+            margin-left: 1rem;
+        }
     }
 }
