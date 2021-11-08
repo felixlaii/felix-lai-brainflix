@@ -33,12 +33,14 @@ class UploadPage extends Component {
                     <label className="upload-section__label">ADD A VIDEO DESCRIPTION</label>
                     <input className="upload-section__description--input" type="text" name="title" placeholder="Add a description to your video"></input>
 
-                    <Link to="/">
-                    <input onClick={this.uploadSuccess} className="upload-section__publish" type="submit" value="PUBLISH"></input>
-                    </Link>
-                    <Link to="/">
-                    <input className= "upload-section__cancel" type="submit" value="CANCEL"></input>
-                    </Link>
+                    <div className="upload-section__submitbuttons">
+                        <Link to="/">
+                            <input onClick={this.uploadSuccess} className="upload-section__publish" type="submit" value="PUBLISH"></input>
+                        </Link>
+                        <Link to="/">
+                            <input className= "upload-section__cancel" type="submit" value="CANCEL"></input>
+                        </Link>
+                    </div>
 
                  </form>
             </div>

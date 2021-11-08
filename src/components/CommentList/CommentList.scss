@@ -9,5 +9,10 @@
     &__nextcomment {
         list-style-type: none;
         
+        @include desktop {
+            width: 30rem;
+            list-style-type: none;
+        }
     }
+
 }   

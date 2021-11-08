@@ -6,6 +6,11 @@
 
 .video-list {
 
+    @include desktop {
+        position: absolute;
+        top: 45rem;
+        left: 50rem;
+    }
     &__nextvideo {
         padding-left: 1rem;
 
@@ -16,6 +21,8 @@
         @include desktop {
             position: absolute;
             right: 5rem;
+            top: 48rem;
+            left: 50rem;
         }
     }
 
@@ -26,6 +33,12 @@
 
         @include tablet {
             margin-left: 2rem;
+        }
+    }
+
+    &__item {
+        @include desktop {
+            margin-bottom: 1.6rem;
         }
     }
 }

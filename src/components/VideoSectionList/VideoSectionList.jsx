@@ -7,9 +7,7 @@ class VideoSectionList extends Component {
     return(
         <div className="video-list">
             <h2 className="video-list__title">NEXT VIDEOS</h2>
-            <div className="video-list__suggestions">
-                
-            </div>
+            <div className="video-list__suggestions"></div>
         </div>
     )
 }

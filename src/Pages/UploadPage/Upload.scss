@@ -45,6 +45,14 @@
         }
     }
 
+    &__submitbuttons {
+        
+        @include tablet {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+
     &__publish {
         @include submitstyles;
         background-color: $primarybrainlight;
@@ -57,6 +65,11 @@
         background-repeat: no-repeat;
         background-position: 30%;
         background-position: left;
+
+        @include tablet {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
 
     }
     &__publish:hover {
@@ -71,5 +84,10 @@
         margin-right: 1rem;
         padding-left: 9.4rem;
         padding-right: 9.4rem;
+
+        @include tablet {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
     }
 }
