@@ -1,15 +1,15 @@
 import axios from 'axios';
 import { Component } from 'react'
-import {API_KEY} from '../../utils/brainflixAPI'
+import {API_KEY, searchVideosEndpoint} from '../../utils/brainflixAPI'
 import VideoSectionList from '../../components/VideoSectionList/VideoSectionList';
 import VideoSectionItem from '../../components/VideoSectionItem/VideoSectionItem';
 import CommentListItem from '../../components/CommentListItem/CommentListItem'
 import VideoComments from '../../components/VideoComments/VideoComments';
+import VideoViews from '../../assets/icons/views.svg';
+import VideoLikes from '../../assets/icons/likes.svg';
 import './Home.scss'
 import '../../components/VideoSectionItem/VideoSectionItem.scss';
 import '../../components/VideoSectionList/VideoSectionList.scss';
-import VideoViews from '../../assets/icons/views.svg';
-import VideoLikes from '../../assets/icons/likes.svg';
 
 class Home extends Component {
 
@@ -19,7 +19,7 @@ class Home extends Component {
     }
 
     getSelectedVideo = (videoId) => {
-        axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${API_KEY}`)
+        axios.get(`${searchVideosEndpoint}/${videoId}?api_key=${API_KEY}`)
             .then((response) => {
                 this.setState({
                     selectedVideo: response.data
@@ -29,7 +29,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        axios.get("https://project-2-api.herokuapp.com/videos?api_key=dc4a6b49-ab20-4995-a836-bec86ffba736")
+        axios.get(`${searchVideosEndpoint}?api_key=${API_KEY}`)
             .then((response) => {
                 this.setState({
                     videoList: response.data
