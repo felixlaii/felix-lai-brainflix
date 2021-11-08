@@ -6,7 +6,9 @@ import './PageHeader.scss';
 const Header = () => {
     return (
     <nav className="primary-nav">
+        <Link to="/">
         <img className="primary-nav__logo" src={BrainFlixLogo} alt="primary nav logo" />
+        </Link>
         <div className="primary-nav__searchandupload"> 
             <div className="primary-nav__searchbar">
                 <input className="primary-nav__search" type="text" name="search" placeholder="Search" />
