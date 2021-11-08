@@ -1,4 +1,4 @@
-import './videosectionlist.scss';
+import './VideoSectionList.scss';
 import {Component} from 'react';
 
 class VideoSectionList extends Component {

@@ -1,7 +1,7 @@
 import BrainFlixLogo from '../../assets/logo/BrainFlix-logo.svg';
 import SearchAva from '../../assets/images/Mohan-muruge.jpg';
 import { Link } from 'react-router-dom';
-import './Header.scss';
+import './PageHeader.scss';
 
 const Header = () => {
     return (

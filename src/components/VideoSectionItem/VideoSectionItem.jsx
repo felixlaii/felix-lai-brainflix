@@ -1,5 +1,5 @@
-import './videosectionitem.scss'
-import '../VideoSectionList/videosectionlist.scss'
+import './VideoSectionItem.scss'
+import '../VideoSectionList/VideoSectionList.scss'
 import { Link } from 'react-router-dom'
 
 function VideoSectionItem({title, image, channel, id}) {

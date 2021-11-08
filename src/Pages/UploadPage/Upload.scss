@@ -106,15 +106,13 @@
 
     &__inputinfo {
         @include desktop {
-            display: flex;
-            flex-direction: column;
+            @include flexcolumn;
         }
     }
 
     &__container {
         @include desktop {
-            display: flex;
-            flex-direction: row;
+            @include flexrow;
             margin-left: 4rem;
             margin-right: 10.5rem;
             border-bottom: 1px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;

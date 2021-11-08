@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header/Header';
+import PageHeader from './components/PageHeader/PageHeader';
 import UploadPage from './Pages/UploadPage/Upload';
 import Home from './Pages/Home/Home';
 
@@ -12,7 +12,7 @@ class App extends React.Component {
     return (
       <>
       <BrowserRouter>
-        <Header />
+        <PageHeader />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/video/:videoId" component={Home} />

@@ -34,10 +34,7 @@
     &__avatar--logo {
         background-color: $secondarydark;
         position: relative;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 50%;
+        @include avatarposition;
         right: 4rem;
         top: 4rem;
         width: 2.5rem;

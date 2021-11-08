@@ -1,4 +1,4 @@
-import './videocomments.scss';
+import './VideoComments.scss';
 import SearchAva from '../../assets/images/Mohan-muruge.jpg';
 
 function VideoComments() {
