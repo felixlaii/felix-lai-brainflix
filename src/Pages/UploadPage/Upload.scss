@@ -8,12 +8,17 @@
     border-top: 1px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
 
     &__form {
-        display: flex;
-        flex-direction: column;
+        @include flexcolumn;
     }
     &__title {
         font-weight: 700;
         margin-left: 1rem; 
+
+        @include desktop {
+            margin-left: 5rem;
+            margin-right: 10.5rem;
+            border-bottom: 1px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
+        }
     }
 
     &__thumbnail {
@@ -42,6 +47,10 @@
             margin-right: 1rem;
             margin-left: 1rem;
             height: 3.5rem;
+
+            @include desktop {
+                width: 40rem;
+            }
         }
     }
 
@@ -62,9 +71,7 @@
         padding-left: 9.8rem;
         padding-right: 9.8rem;
         background-image: url(../../assets/icons/publish.svg);
-        background-repeat: no-repeat;
-        background-position: 30%;
-        background-position: left;
+        @include bkgdimage;
 
         @include tablet {
             padding-left: 5rem;
@@ -88,6 +95,29 @@
         @include tablet {
             padding-left: 5rem;
             padding-right: 5rem;
+        }
+    }
+    &__videothumbnail {
+        @include desktop {
+            @include flexcolumn;
+        }
+        
+    }
+
+    &__inputinfo {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__container {
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            margin-left: 4rem;
+            margin-right: 10.5rem;
+            border-bottom: 1px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
         }
     }
 }

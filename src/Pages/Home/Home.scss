@@ -81,8 +81,7 @@
     }
 
     &__metrics {
-        display: flex;
-        flex-direction: row;
+        @include flexrow;
         margin-right: 1rem;
         margin-left: 1rem;
         border-bottom: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
@@ -95,24 +94,21 @@
         }
 
         @include desktop {
-            display: flex;
-            flex-direction: row;
+            @include flexrow;
             margin-left: 3rem;
             width: 60%;
         }
     }
 
     &__container {
-        display: flex;
-        flex-direction: column;
+        @include flexcolumn;
         justify-content: space-around;
         @include brainflixpadding;
         padding-right: 9rem;
         padding-left: 0;
 
         @include tablet {
-            display: flex;
-            flex-direction: row;
+            @include flexrow;
             margin-left: 1rem;
             
         }
@@ -127,8 +123,7 @@
     }
 
     &__info {
-        display: flex;
-        flex-direction: column;
+        @include flexcolumn;
         justify-content: space-around;
 
         @include desktop {
@@ -137,8 +132,7 @@
         }
 
         @include tablet {
-            display: flex;
-            flex-direction: row;
+            @include flexrow;
             margin-left: 6rem;
         }
 
@@ -150,8 +144,7 @@
     }
     &__reachability,
     &__likeability {
-        display: flex;
-        flex-direction: row;
+        @include flexrow;
         }
     &__likeability {
         @include tablet {
@@ -165,8 +158,7 @@
         }
     }
     &__icons {
-        display: flex;
-        flex-direction: row;
+        @include flexrow;
         z-index: 1;
         position: absolute;
         height: 1rem;

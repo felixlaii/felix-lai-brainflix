@@ -11,10 +11,8 @@
         width: 70vw;
     }
     &__info {
-  
         list-style: none;
         padding-left: 1rem;
-
         text-decoration: none;
 
         @include tablet {
@@ -46,8 +44,7 @@
 
     &__link {
         text-decoration: none;
-        display: flex;
-        flex-direction: row;
+        @include flexrow;
         
         
     }

@@ -24,15 +24,19 @@ class UploadPage extends Component {
             <div className="upload-section">
                 <h1 className="upload-section__title">Upload Video</h1>
                 <form className="upload-section__form">
-                    <label className="upload-section__label">VIDEO THUMBNAIL</label>
-                    <img className="upload-section__thumbnail" src={Ruffles} alt="ruffles thumbnail" />
+                    <div className="upload-section__container">
+                        <div className="upload-section__videothumbnail">
+                            <label className="upload-section__label">VIDEO THUMBNAIL</label>
+                            <img className="upload-section__thumbnail" src={Ruffles} alt="ruffles thumbnail" />
+                        </div>
+                        <div className="upload-section__inputinfo">
+                            <label className="upload-section__label">TITLE YOUR VIDEO</label>
+                            <input className="upload-section__input" type="text" name="title" placeholder="Add a title to your video"></input>
 
-                    <label className="upload-section__label">TITLE YOUR VIDEO</label>
-                    <input className="upload-section__input" type="text" name="title" placeholder="Add a title to your video"></input>
-
-                    <label className="upload-section__label">ADD A VIDEO DESCRIPTION</label>
-                    <input className="upload-section__description--input" type="text" name="title" placeholder="Add a description to your video"></input>
-
+                            <label className="upload-section__label">ADD A VIDEO DESCRIPTION</label>
+                            <input className="upload-section__description--input" type="text" name="title" placeholder="Add a description to your video"></input>
+                        </div>
+                    </div>
                     <div className="upload-section__submitbuttons">
                         <Link to="/">
                             <input onClick={this.uploadSuccess} className="upload-section__publish" type="submit" value="PUBLISH"></input>

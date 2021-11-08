@@ -9,14 +9,12 @@
     padding: 1rem;
 
     @include tablet {
-        display: flex;
-        flex-direction: row;
+        @include flexrow;
         height: 8vh;
     }
 
     @include desktop {
-        display: flex;
-        flex-direction: row;
+        @include flexrow;
         justify-items: center;
         margin-right: 0;
     }
@@ -47,8 +45,7 @@
         border: none;
 
         @include tablet {
-            display: flex;
-            flex-direction: row;
+            @include flexrow;
             align-items: center;
         }
 
@@ -71,9 +68,7 @@
         border-color: $secondarydark;
         background-color: $secondarylight;
         background-image: url(../../assets/icons/search.svg);
-        background-repeat: no-repeat;
-        background-position: 30%;
-        background-position: left;
+        @include bkgdimage;
 
         @include tablet {
             height: 0.5rem;
@@ -94,9 +89,7 @@
         padding-left: 9.4rem;
         padding-right: 9.4rem;
         background-image: url(../../assets/icons/upload.svg);
-        background-repeat: no-repeat;
-        background-position: 30%;
-        background-position: left;
+        @include bkgdimage;
 
         @include tablet {
             width: 1rem;

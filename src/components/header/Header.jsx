@@ -13,10 +13,9 @@ const Header = () => {
                 <img className="primary-nav__search--avatar" src={SearchAva} alt="Search Bar Avatar" />
             </div>
             <Link to="/Upload">
-            <input className= "primary-nav__upload" type="submit" value="UPLOAD"></input>
+                <input className= "primary-nav__upload" type="submit" value="UPLOAD"></input>
             </Link>
         </div>
-
     </nav>
     )
 }

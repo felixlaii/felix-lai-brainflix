@@ -43,15 +43,11 @@
     }
 
     &__inputava {
-        display: flex;
-        flex-direction: row;
+        @include flexrow;
     }
 
     &__avatar {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 50%;
+        @include avatarposition;
         left: 1rem;
         top: 4rem;
         width: 2.5rem;
@@ -69,9 +65,7 @@
         font-size: 0.75rem;
         margin-top: 1rem;
         background-image: url(../../assets/icons/add_comment.svg);
-        background-repeat: no-repeat;
-        background-position: 30%;
-        background-position: left;
+        @include bkgdimage;
 
         @include tablet {
             position: relative;

@@ -27,8 +27,7 @@
     }
 
     &__info {
-        display: flex;
-        flex-direction: row;
+        @include flexrow;
         justify-content: space-between;
     }
 
