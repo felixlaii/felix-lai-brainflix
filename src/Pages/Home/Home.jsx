@@ -1,15 +1,15 @@
-import axios from 'axios';
+import axios from 'axios'
 import { Component } from 'react'
 import {API_KEY, searchVideosEndpoint} from '../../utils/brainflixAPI'
-import VideoSectionList from '../../components/VideoSectionList/VideoSectionList';
-import VideoSectionItem from '../../components/VideoSectionItem/VideoSectionItem';
+import VideoSectionList from '../../components/VideoSectionList/VideoSectionList'
+import VideoSectionItem from '../../components/VideoSectionItem/VideoSectionItem'
 import CommentListItem from '../../components/CommentListItem/CommentListItem'
-import VideoComments from '../../components/VideoComments/VideoComments';
-import VideoViews from '../../assets/icons/views.svg';
-import VideoLikes from '../../assets/icons/likes.svg';
+import VideoComments from '../../components/VideoComments/VideoComments'
+import VideoViews from '../../assets/icons/views.svg'
+import VideoLikes from '../../assets/icons/likes.svg'
 import './Home.scss'
-import '../../components/VideoSectionItem/VideoSectionItem.scss';
-import '../../components/VideoSectionList/VideoSectionList.scss';
+import '../../components/VideoSectionItem/VideoSectionItem.scss'
+import '../../components/VideoSectionList/VideoSectionList.scss'
 
 class Home extends Component {
 
@@ -122,4 +122,4 @@ class Home extends Component {
 }
 }
 
-export default Home;
+export default Home
