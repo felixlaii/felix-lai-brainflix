@@ -1,4 +1,4 @@
-import '../../components/CommentListItem/CommentListItem.scss';
+import './CommentListItem.scss';
 
 function CommentListItem({ name, comment, timestamp}) {
     let postedDate = new Date(timestamp);

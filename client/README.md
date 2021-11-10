@@ -29,8 +29,3 @@ videoListSection
         - image
         - title
         - channel
-
-
-PlantNav = VideoSectionList
-PlantDetails = VideoCardSection
-PlantNavItem = VideoSectionItem
