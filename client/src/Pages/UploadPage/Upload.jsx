@@ -3,17 +3,22 @@ import { Link } from 'react-router-dom';
 import Ruffles from '../../assets/images/ruffles.jpg'
 import './Upload.scss'
 import {Component} from 'react'
+import axios from 'axios';
 
 class UploadPage extends Component {
 
-    constructor() {
-        super();
-        this.isUploadSuccessful = false;
-    }
+    uploadSuccess = (e) => {
+        e.preventDefault();
+        axios.post(`/videos`, {
+            "title": e.target.title.value,
+            "description": e.target.description.value
+        })
+        .then(res => {
 
-    uploadSuccess = () => {
-        this.isUploadSuccessful = true;
+            console.log(res)
+            })
         alert('You have successfully uploaded your video');
+        this.props.history.goBack()
     }
 
 
@@ -23,7 +28,7 @@ class UploadPage extends Component {
         <div>
             <div className="upload-section">
                 <h1 className="upload-section__title">Upload Video</h1>
-                <form onClick="redirect(./)" className="upload-section__form">
+                <form onSubmit={this.uploadSuccess} className="upload-section__form">
                     <div className="upload-section__container">
                         <div className="upload-section__videothumbnail">
                             <label className="upload-section__label">VIDEO THUMBNAIL</label>
@@ -34,13 +39,13 @@ class UploadPage extends Component {
                             <input className="upload-section__input" type="text" name="title" placeholder="Add a title to your video"></input>
 
                             <label className="upload-section__label">ADD A VIDEO DESCRIPTION</label>
-                            <input className="upload-section__description--input" type="text" name="title" placeholder="Add a description to your video"></input>
+                            <input className="upload-section__description--input" type="text" name="description" placeholder="Add a description to your video"></input>
                         </div>
                     </div>
                     <div className="upload-section__submitbuttons">
-                        {/* <Link to="/"> */}
-                            <input onClick={this.uploadSuccess} className="upload-section__publish" type="submit" value="PUBLISH"></input>
-                        {/* </Link> */}
+                      
+                            <input onSubmit={this.uploadSuccess} className="upload-section__publish" type="submit" value="PUBLISH"></input>
+                     
                         <Link to="/">
                             <input className= "upload-section__cancel" type="submit" value="CANCEL"></input>
                         </Link>
