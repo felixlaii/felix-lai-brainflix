@@ -23,7 +23,7 @@ class UploadPage extends Component {
         <div>
             <div className="upload-section">
                 <h1 className="upload-section__title">Upload Video</h1>
-                <form className="upload-section__form">
+                <form onClick="redirect(./)" className="upload-section__form">
                     <div className="upload-section__container">
                         <div className="upload-section__videothumbnail">
                             <label className="upload-section__label">VIDEO THUMBNAIL</label>
@@ -38,9 +38,9 @@ class UploadPage extends Component {
                         </div>
                     </div>
                     <div className="upload-section__submitbuttons">
-                        <Link to="/">
+                        {/* <Link to="/"> */}
                             <input onClick={this.uploadSuccess} className="upload-section__publish" type="submit" value="PUBLISH"></input>
-                        </Link>
+                        {/* </Link> */}
                         <Link to="/">
                             <input className= "upload-section__cancel" type="submit" value="CANCEL"></input>
                         </Link>

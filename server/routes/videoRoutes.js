@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { v4: uuidv4 } = require('uuid');
 const fs = require("fs");
 
 let videos = fs.readFileSync('./data/videos.json')
@@ -22,7 +23,23 @@ router.get('/:videoId', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    res.send('you have posted')
+  const { title, description } = req.body;
+
+  videos.push({
+      id: uuidv4(),
+      title,
+      description,
+      channel: "BrainFlix",
+      image: "Place Image Here",
+      views: "0",
+      likes: "0",
+      video: "http://project-2-api.herokuapp.com/stream",  
+      duration: "0",
+      timestamp: Date.now(),
+      comments: [],
+    });
+    
+    res.json(videos)
 })
 
 module.exports = router;
