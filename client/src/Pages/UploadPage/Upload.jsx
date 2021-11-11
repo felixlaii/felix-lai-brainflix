@@ -11,14 +11,13 @@ class UploadPage extends Component {
         e.preventDefault();
         axios.post(`/videos`, {
             "title": e.target.title.value,
-            "description": e.target.description.value
+            "description": e.target.description.value,
+            "image": '/ruffles.jpg'
         })
         .then(res => {
-
-            console.log(res)
+            alert('You have successfully uploaded your video');
+            this.props.history.goBack()
             })
-        alert('You have successfully uploaded your video');
-        this.props.history.goBack()
     }
 
 

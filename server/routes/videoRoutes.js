@@ -22,14 +22,14 @@ router.get('/:videoId', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  const { title, description } = req.body;
+  const { title, description, image } = req.body;
 
   videos.push({
       id: uuidv4(),
       title,
       description,
       channel: "Felix Lai",
-      image: "http://localhost:8080/ruffles.jpg",
+      image,
       views: "49,399,063",
       likes: "20,956,201",
       video: "http://project-2-api.herokuapp.com/stream",  
