@@ -30,14 +30,16 @@ router.post('/', (req, res) => {
       title,
       description,
       channel: "BrainFlix",
-      image: "Place Image Here",
+      image: "http://localhost:8080/ruffles.jpg",
       views: "0",
       likes: "0",
       video: "http://project-2-api.herokuapp.com/stream",  
       duration: "0",
       timestamp: Date.now(),
       comments: [],
-    });
+    }); 
+        fs.writeFileSync('./data/videos.json', JSON.stringify(videos));
+        res.status(201).json(videos);
     
     res.json(videos)
 })
