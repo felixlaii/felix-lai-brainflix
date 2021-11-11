@@ -7,6 +7,6 @@ const port = process.env.PORT || 9000
 
 app.use('/videos', videoRoutes)
 
-app.listen(8080, function() {
+app.listen(port, function() {
     console.log('listen')
 });
