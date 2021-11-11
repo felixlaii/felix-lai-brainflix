@@ -35,10 +35,10 @@ class UploadPage extends Component {
                         </div>
                         <div className="upload-section__inputinfo">
                             <label className="upload-section__label">TITLE YOUR VIDEO</label>
-                            <input className="upload-section__input" type="text" name="title" placeholder="Add a title to your video"></input>
+                            <textarea className="upload-section__input" type="text" name="title" placeholder="Add a title to your video"></textarea>
 
                             <label className="upload-section__label">ADD A VIDEO DESCRIPTION</label>
-                            <input className="upload-section__description--input" type="text" name="description" placeholder="Add a description to your video"></input>
+                            <textarea className="upload-section__description--input" type="text" name="description" placeholder="Add a description to your video"></textarea>
                         </div>
                     </div>
                     <div className="upload-section__submitbuttons">

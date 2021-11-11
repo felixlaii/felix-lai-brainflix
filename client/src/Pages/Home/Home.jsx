@@ -48,8 +48,7 @@ class Home extends Component {
 
     if(previousVideoId !== currentVideoId) {
         this.getSelectedVideo(currentVideoId)
-
-        window.scrollTo({
+            window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             })
