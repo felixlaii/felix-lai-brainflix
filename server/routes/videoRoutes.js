@@ -12,7 +12,7 @@ let videoArray = videos.map((video) => {
         id: video.id,
         title: video.title,
         image: video.image,
-        description: video.description
+        channel: video.channel
     }
     return videoList
 })
