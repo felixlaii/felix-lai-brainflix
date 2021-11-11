@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { Component } from 'react'
-import {API_KEY, searchVideosEndpoint} from '../../utils/brainflixAPI'
+// import {API_KEY, searchVideosEndpoint} from '../../utils/brainflixAPI'
 import VideoSectionList from '../../components/VideoSectionList/VideoSectionList'
 import VideoSectionItem from '../../components/VideoSectionItem/VideoSectionItem'
 import CommentListItem from '../../components/CommentListItem/CommentListItem'
@@ -19,8 +19,9 @@ class Home extends Component {
     }
 
     getSelectedVideo = (videoId) => {
-        axios.get(`${searchVideosEndpoint}/${videoId}?api_key=${API_KEY}`)
-            .then((response) => {
+        axios.get(`/videos/${videoId}`)
+        .then((response) => {
+            console.log(response.data)
                 this.setState({
                     selectedVideo: response.data
                 })
@@ -29,7 +30,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        axios.get(`${searchVideosEndpoint}?api_key=${API_KEY}`)
+        axios.get(`/videos`)
             .then((response) => {
                 this.setState({
                     videoList: response.data
