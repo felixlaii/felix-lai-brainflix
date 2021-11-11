@@ -6,7 +6,6 @@ const fs = require("fs");
 let videos = fs.readFileSync('./data/videos.json')
 videos = JSON.parse(videos);
 
-
 router.get('/', (req, res) => {
     res.json(videos)
 });
@@ -29,12 +28,12 @@ router.post('/', (req, res) => {
       id: uuidv4(),
       title,
       description,
-      channel: "BrainFlix",
+      channel: "Felix Lai",
       image: "http://localhost:8080/ruffles.jpg",
-      views: "0",
-      likes: "0",
+      views: "49,399,063",
+      likes: "20,956,201",
       video: "http://project-2-api.herokuapp.com/stream",  
-      duration: "0",
+      duration: "3:29",
       timestamp: Date.now(),
       comments: [],
     }); 
