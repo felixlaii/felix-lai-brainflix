@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { Component } from 'react'
-// import {API_KEY, searchVideosEndpoint} from '../../utils/brainflixAPI'
 import VideoSectionList from '../../components/VideoSectionList/VideoSectionList'
 import VideoSectionItem from '../../components/VideoSectionItem/VideoSectionItem'
 import CommentListItem from '../../components/CommentListItem/CommentListItem'
