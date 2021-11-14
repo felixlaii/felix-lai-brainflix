@@ -20,7 +20,6 @@ class Home extends Component {
     getSelectedVideo = (videoId) => {
         axios.get(`/videos/${videoId}`)
         .then((response) => {
-            console.log(response.data)
                 this.setState({
                     selectedVideo: response.data
                 })
@@ -68,29 +67,29 @@ class Home extends Component {
     return (
         <>
         <div className="primary-video">
-            <div className="primary-video__videoicon">
-                <video className="primary-video__video" poster={this.state.selectedVideo.image} controls></video>
-            </div>
+            <video className="primary-video__video" poster={this.state.selectedVideo.image} controls></video>
+        </div>
 
-            <h2 className="primary-video__title">{this.state.selectedVideo.title}</h2>
+        <div className="primary-details">
+            <h2 className="primary-details__title">{this.state.selectedVideo.title}</h2>
 
-            <div className="primary-video__metrics">
-                <div className="primary-video__container">
-                    <p className="primary-video__container-channel"><strong>By {this.state.selectedVideo.channel}</strong></p>
-                    <p className="primary-video__container-date">{postedDate}</p>
+            <div className="primary-details__metrics">
+                <div className="primary-details__container">
+                    <p className="primary-details__container-channel"><strong>By {this.state.selectedVideo.channel}</strong></p>
+                    <p className="primary-details__container-date">{postedDate}</p>
                 </div>
-                <div className="primary-video__info">
-                    <div className="primary-video__reachability">
-                        <img className="primary-video__viewsicon" src={VideoViews} alt='Video Views' />
-                        <p className="primary-video__info-views">{this.state.selectedVideo.views}</p>
+                <div className="primary-details__info">
+                    <div className="primary-details__reachability">
+                        <img className="primary-details__viewsicon" src={VideoViews} alt='Video Views' />
+                        <p className="primary-details__info-views">{this.state.selectedVideo.views}</p>
                    </div>
-                    <div className="primary-video__likeability">
-                        <img className="primary-video__likesicon" src={VideoLikes} alt='Video Likes' />
-                        <p className="primary-video__info-likes">{this.state.selectedVideo.likes}</p>
+                    <div className="primary-details__likeability">
+                        <img className="primary-details__likesicon" src={VideoLikes} alt='Video Likes' />
+                        <p className="primary-details__info-likes">{this.state.selectedVideo.likes}</p>
                     </div>
               </div>
             </div>
-           <p className="primary-video__description">{this.state.selectedVideo.description}</p>
+           <p className="primary-details__description">{this.state.selectedVideo.description}</p>
         </div>
 
         <VideoComments />

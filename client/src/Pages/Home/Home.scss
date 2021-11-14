@@ -27,17 +27,19 @@
             border-right: 8rem solid $secondarybraindark; 
             border-left: 8rem solid $secondarybraindark; 
             }
-
-
     }
+}
 
-    &__title {
-        padding-left: 1rem;
+.primary-details {
+    @include flexcolumn;    
 
-        @include tablet {
-            font-size: 2rem;
-            padding-left: 2rem;
-            margin-bottom: 0;
+        &__title {
+            padding-left: 1rem;
+
+            @include tablet {
+                font-size: 2rem;
+                padding-left: 2rem;
+                margin-bottom: 0;
 
             @include desktop {
                 font-size: 3rem;
@@ -46,207 +48,123 @@
                 margin-right: 14rem;
             }
         }
-
     }
 
-    &__description {
-        @include brainflixpadding;
-
-        @include tablet {
-            padding-left: 2rem;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-            margin-top: 0;
-            margin-right: 2rem;
-            font-size: 1rem;
-        }
-
-        @include desktop {
-            margin-left: 2rem;
-            margin-right: 14rem;
-            width: 46rem;
-        }
-    }
-
-    &__duration {
-        position: relative;
-        font-size: 0.7rem;
-        top: 11.5rem;
-        left: 16rem;
-
-        @include tablet {
-            top: 23.7rem;
-            left: 37rem;
-        }
-    }
-
-    &__metrics {
-        @include flexrow;
-        margin-right: 1rem;
-        margin-left: 1rem;
-        border-bottom: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
-        border-top: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
-
-        @include tablet {
-            border-top: none;
-            padding-top: 0;
-            margin-top: 0;
-        }
-
-        @include desktop {
-            @include flexrow;
-            margin-left: 3rem;
-            width: 60%;
-        }
-    }
-
-    &__container {
-        @include flexcolumn;
-        justify-content: space-around;
-        @include brainflixpadding;
-        padding-right: 9rem;
-        padding-left: 0;
-
-        @include tablet {
-            @include flexrow;
-            margin-left: 1rem;
-            
-        }
-
-        &-date {
-            color: $primarydark;
+        &__description {
+            @include brainflixpadding;
 
             @include tablet {
                 padding-left: 2rem;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                margin-top: 0;
+                margin-right: 2rem;
+                font-size: 1rem;
+            }
+
+            @include desktop {
+                margin-left: 2rem;
+                margin-right: 14rem;
+                width: 46rem;
             }
         }
-    }
 
-    &__info {
-        @include flexcolumn;
-        justify-content: space-around;
+        &__duration {
+            position: relative;
+            font-size: 0.7rem;
+            top: 11.5rem;
+            left: 16rem;
 
-        @include desktop {
-            margin-left: 0rem;
-            width: 5vw;
+            @include tablet {
+                top: 23.7rem;
+                left: 37rem;
+            }
         }
 
-        @include tablet {
+        &__metrics {
             @include flexrow;
-            margin-left: 6rem;
-        }
-
-        &-views,
-        &-likes {
-            color: $primarydark;
+            margin-right: 1rem;
             margin-left: 1rem;
+            border-bottom: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
+            border-top: 0.5px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
+
+            @include tablet {
+                border-top: none;
+                padding-top: 0;
+                margin-top: 0;
+            }
+
+            @include desktop {
+                @include flexrow;
+                margin-left: 3rem;
+                width: 60%;
+            }
         }
+
+        &__container {
+            @include flexcolumn;
+            justify-content: space-around;
+            @include brainflixpadding;
+            padding-right: 9rem;
+            padding-left: 0;
+
+            @include tablet {
+                @include flexrow;
+                margin-left: 1rem;
+                
+            }
+
+            &-date {
+                color: $primarydark;
+
+                @include tablet {
+                    padding-left: 2rem;
+                }
+            }
+        }
+
+        &__info {
+            @include flexcolumn;
+            justify-content: space-around;
+
+            @include desktop {
+                margin-left: 0rem;
+                width: 5vw;
+            }
+
+            @include tablet {
+                @include flexrow;
+                margin-left: 6rem;
+            }
+
+            &-views,
+            &-likes {
+                color: $primarydark;
+                margin-left: 1rem;
+            }
+        }
+        &__reachability,
+        &__likeability {
+            @include flexrow;
+            }
+        &__likeability {
+            @include tablet {
+            margin-left: 1rem;
+            }
+        }
+
+        &__reachability {
+            @include desktop {
+                margin-left: 24rem;
+            }
+        }
+        &__icons {
+            @include flexrow;
+            z-index: 1;
+            position: absolute;
+            height: 1rem;
+            color: $primarylight;
+
     }
-    &__reachability,
-    &__likeability {
-        @include flexrow;
-        }
-    &__likeability {
-        @include tablet {
-        margin-left: 1rem;
-        }
-    }
-
-    &__reachability {
-        @include desktop {
-            margin-left: 24rem;
-        }
-    }
-    &__icons {
-        @include flexrow;
-        z-index: 1;
-        position: absolute;
-        height: 1rem;
-        color: $primarylight;
-
-    &--playicon {
-        position: absolute;
-        left: 1rem;
-        top: 12rem;
-        background-color: $secondarybraindark;
-        opacity: 0.5;
-        padding: 4px 1rem 4px 1rem;
-        border-radius: 4px;
-
-        @include tablet {
-            top: 20.5rem;
-            left: 3.5rem;
-        }
-
-        @include desktop {
-            top: 31rem;
-            left: 9rem;
-        }
-    }
-
-    &--scrubicon {
-        position: absolute;
-        left: 4rem;
-        top: 12rem;
-        background-color: $secondarybraindark;
-        opacity: 0.5;
-        width: 1rem;
-        padding: 0.5rem 7rem 0.5rem 8rem;
-        border-radius: 4px;
-
-        @include tablet {
-            top: 20.5rem;
-            left: 7rem;
-            padding: 2px 17rem 0.5rem 14rem;
-        }
-        @include desktop {
-            top: 31rem;
-            left: 12rem;
-            padding: 2px 33rem 0.5rem 14rem;
-        }
-    }
-
-    &--screenadjicon {
-        position: absolute;
-        left: 22rem;
-        top: 12rem;
-        background-color: $secondarybraindark;
-        opacity: 0.5;
-        z-index: 3;
-        padding: 2px 0.5rem 0.5rem 0.5rem;
-        border-radius: 4px;
-        height: 1rem;
-
-        @include tablet {
-            top: 20.5rem;
-            left: 39.3rem;
-        }
-        @include desktop {
-            top: 31rem;
-            left: 62rem;
-        }
-    }
-
-    &--volumeupicon {
-        position: absolute;
-        left: 20rem;
-        top: 12rem;
-        background-color: $secondarybraindark;
-        opacity: 0.5;
-        z-index: 1;
-        padding: 2px 0.5rem 0.5rem 0.5rem;
-        border-radius: 4px;
-        height: 1rem;
-
-        @include tablet {
-            top: 20.5rem;
-            left: 41.5rem;
-        }
-        @include desktop {
-            top: 31rem;
-            left: 65rem;
-        }
-    }
-}
 }
 
