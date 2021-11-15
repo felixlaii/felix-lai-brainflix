@@ -7,9 +7,8 @@
 .video-list {
 
     @include desktop {
-        position: absolute;
-        top: 45rem;
-        left: 50rem;
+        display: inline-block;
+        border-left: 1px solid $secondarydark; padding-bottom: 0.5rem; padding-left: 0rem;
     }
     &__nextvideo {
         padding-left: 1rem;
@@ -33,6 +32,14 @@
 
         @include tablet {
             margin-left: 2rem;
+        }
+
+        @include desktop {
+           position: absolute;
+           right: 20rem;
+           top: 45rem;
+
+        
         }
     }
 
