@@ -7,9 +7,10 @@ import axios from 'axios';
 
 class UploadPage extends Component {
 
+
     uploadSuccess = (e) => {
         e.preventDefault();
-        axios.post(`/videos`, {
+        axios.get(`/videos`, {
             "title": e.target.title.value,
             "description": e.target.description.value,
             "image": '/ruffles.jpg'
